@@ -1,4 +1,8 @@
+import { motion } from 'framer-motion'
 import React from 'react'
+import Experience from '../components/Experience'
+import SkillSet from '../components/SkillSet'
+
 
 const Home = () => {
   return (
@@ -6,44 +10,25 @@ const Home = () => {
 
       <section className='relative pt-16 sm:pt-0 sm:h-screen max-w-[1440px]  mx-auto '>
         <div className='sm:absolute top-1/2 sm:-translate-y-1/2 sm:max-w-[60%]'>
-          <img src="/images/image1.png" alt="" />
+          <motion.img initial={{opacity:0, x:'-100%', scale:0}} transition={{duration:.8, type:'spring', delay:.2}} animate={{opacity:1, x:0, scale:1}} src="/images/image1.png" alt="" />
         </div>
-        <section className='bg-zinc-800 p-4 sm:w-[60%] sm:mr-0 sm:ml-auto sm:h-screen  sm:bottom-0 sm:pl-16 sm:flex sm:flex-col sm:justify-center'>
-          <h1 className='text-white font-semibold text-4xl pb-2 z-10'>Lorem ipsum, dolor sit amet consectetur.</h1> 
-          <span className='font-semibold text-3xl z-10'>Lorem, ipsum dolor.</span>
-          <p className='pt-4  z-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis blanditiis, quae, illum odit delectus commodi maiores autem iure quia quis voluptatem totam eos hic voluptatibus asperiores expedita corporis possimus mollitia.</p>
+        <section  className='bg-zinc-800 p-4 sm:w-[60%] sm:mr-0 sm:ml-auto sm:h-screen  sm:bottom-0 sm:pl-16 sm:flex sm:flex-col sm:justify-center'>
+          <motion.div initial={{opacity:0, x:'100%', scale:0}} transition={{duration:.8, type:'spring', delay:.2}} animate={{opacity:1, x:0, scale:1}}>
+            <h1 className='text-white font-semibold text-4xl pb-2 z-10'>Lorem ipsum, dolor sit amet consectetur.</h1> 
+            <span className='font-semibold text-3xl z-10'>Lorem, ipsum dolor.</span>
+            <p className='pt-4 sm:pr-6  z-10'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis blanditiis, quae, illum odit delectus commodi maiores autem iure quia quis voluptatem totam eos hic voluptatibus asperiores expedita corporis possimus mollitia.</p>
+          </motion.div>
         </section>
       </section>
 
-      <section className='py-24 px-4 sm:px-14 max-w-[1440px] mx-auto'>
-        <p className='text-zinc-600'>WORK EXPERIENCE</p>
-        <h2 className=' text-white text-3xl pt-16 font-semibold text-center sm:text-start sm:max-w-[60%] '>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</h2>
-        <div className='pt-16 flex flex-col items-center sm:flex-row justify-between gap-10 text-center sm:text-start '>
-          <article>
-          <span className='text-9xl text-zinc-600 font-light'>01</span>
-          <p className='pt-4 text-white text-2xl'>Front End developer</p>
-          <p className='pt-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae modi omnis amet quia similique! Dolorem, quod.</p>
-          </article>
-          <article>
-          <span className='text-9xl text-zinc-600 font-light'>02</span>
-          <p className='pt-4 text-white text-2xl'>Front End developer</p>
-          <p className='pt-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae modi omnis amet quia similique! Dolorem, quod.</p>
-          </article>
-          <article>
-          <span className='text-9xl text-zinc-600 font-light'>03</span>
-          <p className='pt-4 text-white text-2xl'>Front End developer</p>
-          <p className='pt-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae modi omnis amet quia similique! Dolorem, quod.</p>
-          </article>
-          
-        </div>
-      </section>
+      <Experience/>
 
       <section className='sm:grid sm:grid-cols-[3fr,_2fr] max-w-[1440px] mx-auto'>
         <section className='bg-orange-100 text-zinc-700 py-16 px-12 flex flex-col justify-center'>
           <h3 className='font-semibold text-3xl pb-8 text-black'>Philosophy & values</h3>
           <p>I think everyone wants the same thing - relationship with humanity, peace with the metaphysical, and experience with the universe. I try to grasp these things with my values: authenticity, creativity, & hospitality.</p>
           <div>
-          <button className='border-b-2 border-zinc-500 text-black pt-8 '>Check my LinkedIn</button>
+          <button  className='border-b-2 border-zinc-500 text-black pt-8 inline-block '>Check my LinkedIn</button>
           </div>
         </section>
         <div className=''>
@@ -51,74 +36,27 @@ const Home = () => {
         </div>
       </section>
 
-      <section className='py-16 px-4 sm:grid sm:grid-cols-[2fr,_4fr] gap-16 max-w-[1440px] mx-auto'>
-        <article className='px-8' >
-          <h3 className='text-3xl font-semibold pb-8'>Skill Set</h3>
-          <p className='pb-8 text-zinc-600'>With skills in over 4 different fields of design, I am the perfect person to hire when it comes to a full fledged project. Whatever your needs are, I can pretty much take on any challenge.</p>
-        </article>
+      <SkillSet/>
 
-        <section className=' text-center sm:grid sm:grid-cols-2 sm:gap-4 sm:text-start '>
-          <article className='pb-8 text-zinc-600'>
-            <div className='flex justify-center sm:justify-start h-14'>
-              <img  src="/images/scramble.svg" alt="" />
-            </div>
-            <h4 className='text-2xl font-semibold py-4 text-white'>Framework</h4>
-            <p>react</p>
-            <p>tailwind </p>
-            <p>next </p>
-            
-          </article>
-          <article className='pb-8 text-zinc-600'>
-            <div className='flex justify-center h-14 sm:justify-start '>
-              <img  src="/images/scramble.svg" alt="" />
-            </div>
-            <h4 className='text-2xl font-semibold py-4 text-white'>Framework</h4>
-            <p>react</p>
-            <p>tailwind </p>
-            <p>next </p>
-            
-          </article>
-          <article className='pb-8 text-zinc-600'>
-            <div className='flex justify-center h-14 sm:justify-start '>
-              <img  src="/images/scramble.svg" alt="" />
-            </div>
-            <h4 className='text-2xl font-semibold py-4 text-white'>Framework</h4>
-            <p>react</p>
-            <p>tailwind </p>
-            <p>next </p>
-            
-          </article>
-          <article className='pb-8 text-zinc-600'>
-            <div className='flex justify-center h-14 sm:justify-start '>
-              <img  src="/images/scramble.svg" alt="" />
-            </div>
-            <h4 className='text-2xl font-semibold py-4 text-white'>Framework</h4>
-            <p>react</p>
-            <p>tailwind </p>
-            <p>next </p>
-          </article>
-        </section>
-      </section>
-
-      <section>
+      <section className='pb-8'>
         <div className='text-[50px] text-zinc-600  gap-0 py-8 mx-auto max-w-[1440px] flex flex-wrap justify-center '>
-          <article className='min-w-[120px]  border border-zinc-700 flex text-center justify-center py-3'>
-            <i className='bx bxl-react w-full'></i>
+          <article className='min-w-[120px]   border border-zinc-700 flex text-center justify-center py-3'>
+            <motion.i whileHover={{scale:1.15}}  className='bx bxl-react w-full hover:text-[#61DBFB] transition-colors duration-300'></motion.i>
           </article>
-          <article className='min-w-[120px]  border border-zinc-700 flex text-center justify-center py-3'>
-            <i className='bx bxl-redux w-full' ></i>
+          <article className='min-w-[120px] border border-zinc-700 flex text-center justify-center py-3'>
+            <motion.i whileHover={{scale:1.15}}  className='bx bxl-redux w-full hover:text-[#764abc] transition-colors duration-300' ></motion.i>
           </article>
-          <article className='min-w-[120px]  border border-zinc-700 flex text-center justify-center py-3'>
-            <i className='bx bxl-html5 w-full' ></i>
+          <article className='min-w-[120px] border border-zinc-700 flex text-center justify-center py-3'>
+            <motion.i whileHover={{scale:1.15}}  className='bx bxl-html5 w-full hover:text-[#e34c26] transition-colors duration-300' ></motion.i>
           </article>
-          <article className='min-w-[120px]  border border-zinc-700 flex text-center justify-center py-3'>
-            <i className='bx bxl-tailwind-css w-full' ></i>
+          <article className='min-w-[120px] border border-zinc-700 flex text-center justify-center py-3'>
+            <motion.i whileHover={{scale:1.15}}  className='bx bxl-tailwind-css w-full hover:text-[#01b7d6] transition-colors duration-300' ></motion.i>
           </article>
-          <article className='min-w-[120px]  border border-zinc-700 flex text-center justify-center py-3'>
-            <i className='bx bxl-github w-full'></i>
+          <article className='min-w-[120px] border border-zinc-700 flex text-center justify-center py-3'>
+            <motion.i whileHover={{scale:1.15}}  className='bx bxl-github w-full hover:text-zinc-300 transition-colors duration-300'></motion.i>
           </article>
-          <article className='min-w-[120px]  border border-zinc-700 flex text-center justify-center py-3'>
-            <i className='bx bxl-javascript ' ></i>
+          <article className='min-w-[120px] border border-zinc-700 flex text-center justify-center py-3'>
+            <motion.i whileHover={{scale:1.15}}  className='bx bxl-javascript hover:text-[#f0db4f] transition-colors duration-300 ' ></motion.i>
           </article>
         </div>
       </section>
@@ -168,8 +106,21 @@ const Home = () => {
               <p>Description of the project</p>
             </div>
           </article>
+          <div className='flex justify-center'> 
+          <motion.button
+            whileHover={{scale:1.1,}}
+            whileTap={{scale:.9,}}
+            transition={{type:'spring', stiffness:400, damping:14}}
+            className='py-4 px-6 border-2 border-violet-950 rounded inline'
+          >
+            VIEW ALL PROJECTS</motion.button>
+          </div>
         </div>
         
+      </section>
+
+      <section>
+
       </section>
 
     </div>

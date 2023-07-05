@@ -17,7 +17,7 @@ const Header = () => {
         <div>
         <Link to={'/'}  className='text-zinc-500 h-full px-6 hidden sm:inline-block '>Experience</Link>
         <Link to={'/'} className='text-zinc-500 h-full px-6 hidden sm:inline-block '>Work</Link>
-        <Link to={'/'} className='text-zinc-500 h-full px-6 hidden sm:inline-block '>Contact</Link>
+        <Link to={'contact'} className='text-zinc-500 h-full px-6 hidden sm:inline-block '>Contact</Link>
         <button onClick={handleClickMenu} className='text-zinc-500 h-full px-6  sm:hidden text-2xl'><i className='bx bx-menu-alt-right'></i></button>
         </div>
         <div className={`fixed ${isMenuShown?'':'translate-x-full'} right-0  transition-all duration-300 bg-zinc-800 top-0 bottom-0 `}>
@@ -26,7 +26,7 @@ const Header = () => {
 
             <Link onClick={handleClickMenu} to={'/'}  className='px-6 '>Experience</Link>
             <Link onClick={handleClickMenu} to={'/'} className='px-6 '>Work</Link>
-            <Link onClick={handleClickMenu} to={'/'} className='px-6 '>Contact</Link>
+            <Link onClick={handleClickMenu} to={'contact'} className='px-6 '>Contact</Link>
           </div>
         </div>
       </nav>
